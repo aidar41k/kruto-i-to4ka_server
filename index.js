@@ -15,6 +15,13 @@ app.use("/api", router);
 
 app.use(errorMiddleware)
 
-app.listen(PORT, ()=> {
-   console.log('server started on port', PORT);
-})
+const start = async () => {
+  try {
+    app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+
+start()
