@@ -13,11 +13,16 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  TypeBrand.init({
-    id: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'TypeBrand',
-  });
+  TypeBrand.init(
+    {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    {
+      sequelize,
+      modelName: "TypeBrand",
+    }
+  );
   return TypeBrand;
 };

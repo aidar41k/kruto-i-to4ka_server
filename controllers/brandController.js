@@ -11,3 +11,4 @@ class BrandController {
    return res.json(brands)
   }
 }
+module.exports = new BrandController()

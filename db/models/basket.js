@@ -15,7 +15,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   Basket.init(
     {
-      id: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
     },
     {
       sequelize,

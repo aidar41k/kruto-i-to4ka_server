@@ -15,11 +15,16 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(Device)
     }
   }
-  BasketDevice.init({
-    id: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'BasketDevice',
-  });
+  BasketDevice.init(
+    {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    {
+      sequelize,
+      modelName: "BasketDevice",
+    }
+  );
   return BasketDevice;
 };
